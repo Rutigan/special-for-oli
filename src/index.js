@@ -37,7 +37,7 @@ menuTrigger.addEventListener("mouseover", (event)=>{
 })
 
 // Дописать
-
+//!!
 toggle.addEventListener('click', (event)=>{
   let navStatus;
   event.preventDefault();
