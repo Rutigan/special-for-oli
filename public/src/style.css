@@ -910,6 +910,9 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     font-size: 0.8em;
   }
+  .header__nav_phone_special_links a:last-child {
+    padding: 0;
+  }
   .specialists div data {
     text-align: center;
   }
