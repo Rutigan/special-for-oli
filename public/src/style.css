@@ -853,6 +853,9 @@ body::-webkit-scrollbar-thumb {
     padding-top: 10px;
     box-sizing: border-box;
   }
+  .header__nav_phone_special_links a:last-child {
+    padding: 0;
+  }
 }
 
 
