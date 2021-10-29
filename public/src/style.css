@@ -639,6 +639,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 650px) {
+  data span p {
+    font-size: 1em;
+    color: var(--text-color-primary);
+  }
   .main {
     margin-left: 0px;
     width: 100vw;
@@ -773,18 +777,25 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     width: 100vw;
     text-align: center;
-    
     display: none;
   }
   .header__nav_phone_special_list a:hover{
     background-color: var(--green-primary);
+    z-index: 1;
+    
+  }
+  .header__nav_phone_special_list a{
+    position: relative;
+    z-index: 1;
+    justify-self: center;
     
   }
   .header__nav_phone_special_list svg{
     position: absolute;
     height: 100%;
-    width: 30px;
+    width: 50px;
     background-color: var(--green-primary);
+    z-index: 10;
 
   }
   .graphics__submain_card {
@@ -798,9 +809,25 @@ body::-webkit-scrollbar-thumb {
   .graphics__card{
     position: relative;
   }
-  
-  
-  
+  .graphics__main_img {
+    margin-left: 0;
+    width: 70%;
+  }
+  .graphics__card_background {
+    width: calc(100vw - 30px);
+  }
+  .graphics__card_body {
+    width: calc(100vw - 30px);
+  }
+  .graphics__submain_card {
+    width: calc(100vw - 30px);
+  }
+  .graphics__submain__card_background{
+    width: calc(100vw - 30px);
+  }
+  body::-webkit-scrollbar {
+    width: none;
+  }
 }
 
 
@@ -845,8 +872,9 @@ body::-webkit-scrollbar-thumb {
     line-height: 16px;
   }
   .graphics__submain_image {
-    width: 100%;
+    width: calc(100vw - 20px);
   }
+  
 }
 
 
