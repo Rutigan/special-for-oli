@@ -1,0 +1,25 @@
+{
+  "name": "oli",
+  "version": "1.0.0",
+  "description": "spacial-for-oli",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rutigan/special-for-oli.git"
+  },
+  "author": "Ilya Sidenko <rutyganOfficial@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rutigan/special-for-oli/issues"
+  },
+  "homepage": "https://github.com/Rutigan/special-for-oli#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
