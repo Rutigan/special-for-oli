@@ -23,7 +23,10 @@ let
     menu = document.querySelector('.header__nav_special_list'),
     MouseStatus,
     toggle = document.querySelector('.header__toggle'),
-    nav = document.querySelector('.header__nav_phone');
+    nav = document.querySelector('.header__nav_phone'),
+    subnav = document.querySelector('.header__nav_phone span'),
+    submenu = document.querySelector('.header__nav_phone_special_list'),
+    submenuBack = document.querySelector('.header__nav_phone_special_list svg');
 
 
 menuTrigger.addEventListener("mouseover", (event)=>{
@@ -36,25 +39,42 @@ menuTrigger.addEventListener("mouseover", (event)=>{
   })
 })
 
-// Дописать
-//!!
-toggle.addEventListener('click', (event)=>{
-  let navStatus;
-  event.preventDefault();
 
-  nav.setAttribute('active', 'false')
-  if (nav.active === 'false') {
-    nav.active = 'true'
+toggle.addEventListener('click', (event)=>{
+  let 
+      navStatus;
+
+  event.preventDefault();
+  navStatus = nav.hasAttribute('active');
+  if (navStatus === true) {
     nav.style.display = 'flex'
+    nav.removeAttribute('active')
     return
-  }
-  if (nav.active === 'true') {
+  } else {
     nav.style.display = 'none'
+    nav.setAttribute('active', 'false')
     return
   }
 })
 
-// 
+subnav.addEventListener('click', (event)=>{
+  let 
+      subnavStatus;
+  event.preventDefault();
+  subnavStatus = subnav.hasAttribute('active'); 
+  if (subnavStatus === true) {
+    submenu.style.display = 'flex'
+    subnav.removeAttribute('active')
+    return
+  } else {
+    submenuBack.addEventListener('click', ()=>{submenu.style.display = 'none'})
+    subnav.setAttribute('active', 'false')
+    return
+  }
+  
+})
+
+
 
 let 
     previewImage = document.querySelector('.preview'),
@@ -65,6 +85,8 @@ let
     graphics__main_img = document.querySelector('.graphics__main_img');
 
 document.addEventListener('DOMContentLoaded', ()=>{
+  nav.setAttribute('active', 'false')
+  subnav.setAttribute('active', 'false')
   let 
       styleString = `${window.screen.width}px`,
       widthForPictures = viewportWidth - 20;
