@@ -852,6 +852,7 @@ body::-webkit-scrollbar-thumb {
     height: 40px;
     padding-top: 10px;
     box-sizing: border-box;
+    font-size: 0.8em;
   }
   .header__nav_phone_special_links a:last-child {
     padding: 0;
