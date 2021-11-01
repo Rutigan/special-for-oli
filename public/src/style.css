@@ -861,6 +861,17 @@ body::-webkit-scrollbar-thumb {
 
 
 @media (max-width: 400px) {
+ 
+  *{
+    overflow-x: hidden;
+  }
+  .header__logo_wrapper {
+    overflow: hidden;
+  }
+  .header__nav_phone {
+    height: 180px;
+  }
+  
   .main {
     margin-left: 0px;
   }
@@ -909,13 +920,33 @@ body::-webkit-scrollbar-thumb {
   .graphics__card_background {
     height: 500px;
   }
+  .header__nav_phone_special_list {
+    height: 220px;
+  }
   .header__nav_phone_special_list a {
     width: 200px;
     margin: 0 auto;
     font-size: 0.8em;
+    padding: 0;
+    height: auto;
+    background-color: var(--green-primary);
+  }
+  .header__nav_phone {
+    height: 220px;
+    justify-content: space-around;
+  }
+  .header__nav_phone_special_links {
+    z-index: 10;
+    height: 220px;
+    justify-content: space-between;
+    background-color: var(--green-secondary);
+  }
+  .header__nav_phone_special_links a:first-child {
+    margin-top: 5px;
   }
   .header__nav_phone_special_links a:last-child {
     padding: 0;
+    margin-bottom: 5px;
   }
   .specialists div data {
     text-align: center;
